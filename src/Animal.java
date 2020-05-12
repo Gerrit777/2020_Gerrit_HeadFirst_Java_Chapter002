@@ -17,5 +17,6 @@ class DierMamalHuman {
         Human elvis=new Human();
         elvis.liveBirth();
         elvis.speak();
+        elvis.languageSpoken="Dutch";
     }
 }
