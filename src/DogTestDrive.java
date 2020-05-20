@@ -32,5 +32,5 @@ class DogTestDrive {
         System.out.println("Het geheim is: "+theSecret);
         two.bark(3);
         three.bark(1);
-}
+    }
 }
