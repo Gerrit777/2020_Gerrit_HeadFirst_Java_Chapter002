@@ -1,4 +1,5 @@
 //BLZ 379 uit HeadFirst Java boek -- Werkende versie :-) (28-MEI-2020)
+//https://stackoverflow.com/questions/41107/how-to-generate-a-random-alpha-numeric-string?noredirect=1&lq=1
 
 import javax.swing.*;
 import java.awt.*;
