@@ -1,3 +1,6 @@
+//https://www.ntu.edu.sg/home/ehchua/programming/java/JDBC_Basic.html
+//You don't have to startup MySql to run this program !
+
 import java.sql.*;  // Using 'Connection', 'Statement' and 'ResultSet' classes in java.sql package
 
 
@@ -6,8 +9,8 @@ public class JDBCSelectTest {   // Save as "JdbcSelectTest.java" (JDK 7 and abov
         try (
                 // Step 1: Allocate a database 'Connection' object
                 Connection conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/ebookshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC","root"
-                        , "Test777&");   // For MySQL only
+                        "jdbc:mysql://localhost:3306/ebookshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
+                        "root", "Test777&");   // For MySQL only
                 // The format is: "jdbc:mysql://hostname:port/databaseName", "username", "password"
 
                 // Step 2: Allocate a 'Statement' object in the Connection
