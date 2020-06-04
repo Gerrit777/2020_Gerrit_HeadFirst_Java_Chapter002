@@ -1,3 +1,5 @@
+//Toevoegen van Select(), Update(), en Insert().
+
 import java.sql.*;  // Using 'Connection', 'Statement' and 'ResultSet' classes in java.sql package
 
 public class JDBCTotalTest{
