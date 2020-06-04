@@ -1,5 +1,6 @@
 //https://www.ntu.edu.sg/home/ehchua/programming/java/JDBC_Basic.html
 //You don't have to startup MySql to run this program !
+//Opdracht 3.1 1 gedaan: Select * from books
 
 import java.sql.*;  // Using 'Connection', 'Statement' and 'ResultSet' classes in java.sql package
 
@@ -17,7 +18,7 @@ public class JDBCSelectTest {   // Save as "JdbcSelectTest.java" (JDK 7 and abov
                 Statement stmt = conn.createStatement();
         ) {
             // Step 3: Execute a SQL SELECT query. The query result is returned in a 'ResultSet' object.
-            String strSelect = "select title, price, qty from books";
+            String strSelect = "select * from books";
             System.out.println("The SQL statement is: " + strSelect + "\n"); // Echo For debugging
 
             ResultSet rset = stmt.executeQuery(strSelect);
@@ -27,13 +28,16 @@ public class JDBCSelectTest {   // Save as "JdbcSelectTest.java" (JDK 7 and abov
             System.out.println("The records selected are:");
             int rowCount = 0;
             while(rset.next()) {   // Move the cursor to the next row, return false if no more row
+                int       id = rset.getInt("id");
                 String title = rset.getString("title");
+                String author = rset.getString("author");
                 double price = rset.getDouble("price");
                 int    qty   = rset.getInt("qty");
-                System.out.println(title + ", " + price + ", " + qty);
+                System.out.println(id + ", " + title + ", " + author + ", " + price + ", " + qty);
                 ++rowCount;
             }
             System.out.println("Total number of records = " + rowCount);
+
 
         } catch(SQLException ex) {
             ex.printStackTrace();
