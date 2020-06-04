@@ -9,7 +9,7 @@ public class JDBCTotalTest{
         Insert();
     }
 
-private static void Select() {
+public static void Select() {
         try (
                 // Step 1: Allocate a database 'Connection' object
                 Connection conn = DriverManager.getConnection(
@@ -46,7 +46,7 @@ private static void Select() {
             ex.printStackTrace();
         }  // Step 5: Close conn and stmt - Done automatically by try-with-resources (JDK 7)
     }
-    private static void Update() {
+    public static void Update() {
         try (
                 // Step 1: Allocate a database 'Connection' object
                 Connection conn = DriverManager.getConnection(
@@ -79,7 +79,7 @@ private static void Select() {
             ex.printStackTrace();
         }  // Step 5: Close conn and stmt - Done automatically by try-with-resources
     }
-    private static void Insert() {
+    public static void Insert() {
         try (
                 // Step 1: Allocate a database 'Connection' object
                 Connection conn = DriverManager.getConnection(
