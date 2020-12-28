@@ -4,7 +4,7 @@ class Dier{
 
 class Mammal extends Dier{
     String furColor;
-    void liveBirth() {System.out.println("Baby baaren"); }
+    void liveBirth() {System.out.println("Baby baaren!"); }
 }
 
 class Human extends Mammal{
